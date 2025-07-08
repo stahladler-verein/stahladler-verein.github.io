@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>An Exploration of Pedal-Powered Liquid Dispensers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">STAHLADLER</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+							<!-- <li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">12/06/2025</span>
+									<h1>An Exploration of Pedal-Powered Liquid Dispensers</h1>
+									<p>Andrew Reinhard Dilisto</p>
+								</header>
+								<h2>1. Abstract</h2>
+								<p>The increasing consumption of sugar-sweetened beverages among youth has been linked to rising
+obesity and type 2 diabetes rates, prompting health policy responses such as indirect taxation on sug-
+ary drinks. This project proposes an innovative, health-conscious alternative: a pedal-powered liquid
+dispenser. The device encourages physical activity by requiring users to pedal to access sugary drinks
+by converting kinetic energy from a pedaling motion to electrical energy to power a liquid pump. The
+system utilizes a bike-mounted AC generator, a voltage step-up transformer, a DC power supply, and
+an Arduino-controlled circuit integrated with a load cell and a relay module to manage the flow of the
+liquid. The project promotes environmental sustainability, physical recreation, and behavioral change in
+consumption habits, despite the challenges faced by the current prototype, such as overly rapid liquid
+dispensing. Enhancements such as PWM-controlled MOSFETs and calorie tracking position it as a
+creative intervention in the public health landscape.</p>
+<h2>2. Introduction</h2>
+<p>Sugar-sweetened drinks have experienced an increase in consumption. From 1990 to 2018, sugar-
+sweetened beverages among children and adolescents rose by 23%. A subsequent rise also follows this in
+obesity rates (Lara-Castor, 2024). The rising prevalence of sugar-sweetened beverages across diets poses
+potential long-term health risks, contributing to excess weight gain and type 2 diabetes (Lara-Castor,
+2025). To tackle these problems, governments have taken preventative measures such as introducing an
+excise (indirect) tax on sugar-sweetened drinks by the Indonesian Ministry of Finance starting July 2025
+(Mulya, 2025). This is particularly due to the high rates of diabetes within the country, as it affects
+around 10% of the population. This project presents another solution: pedal-powered dispensers.
+Pedal-powered dispensers are liquid dispensing apparatus that are powered by a pedalling action.
+Kinetic energy from the pedals is transformed into electrical energy by an AC generator (WikiBooks,
+n.d.), which is used to power a DC pump that will allow the liquid to be transferred for consumption.
+This project aims to promote physical exercise to consumers of sugar-sweetened drinks engagingly and
+uniquely, while also exploring alternative, sustainable possibilities in powering electrical appliances.</p>
+<h2>3. Methodology</h2>
+The components of the project are divided into two parts, the former being the generator circuit and
+the latter being the control circuit that includes the pump. In summary, AC flows from the generator
+circuit to the control circuit, which is then stepped up using a step-up transformer (Maier & Appleton,
+n.d.). This is due to the input voltage range of the AC/DC converter. After the rectification of the AC,
+some of it flows to power the Arduino UNO board, while the rest is used to power the DC pump. A
+relay module is utilized to activate and deactivate the aforementioned pump.
+<h3>3.1. Bill of Materials</h3>
+<table>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Part Name</th>
+      <th>Part Description</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>BMX United Roouse</td>
+      <td>Bicycle used during the project</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bike Stationary Stand</td>
+      <td>Used to ensure that the bike is stationary during pedalling</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Bike Dynamo Generator 12V 6W</td>
+      <td>To transform kinetic energy into electrical energy</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Kabel Merah Hitam 2x0.75mm</td>
+      <td>Used for wiring in both the generator circuit and the control circuit</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>TRONIC Transformer 1A</td>
+      <td>Increases the voltage of the current from the generator circuit to 220V</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>DC Pump 365 12V DC</td>
+      <td>Used to pump the liquid</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>DC Power Supply AC to DC Single Output DS-145-12 12A</td>
+      <td>Converts 220V AC to usable 12V DC</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>BESTEP 03VDC Relay Module</td>
+      <td>Activates and deactivates the DC pump, toggled using the Arduino UNO board</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Arduino UNO</td>
+      <td>Handles input data from the load cell and toggles the relay module</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Load Cell Module + HX711 + Acrylic</td>
+      <td>Measures the mass of the liquid and sends a signal to the Arduino UNO microcontroller when it reaches a pre-defined limit</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Jumper cables</td>
+      <td>An assortment of jumper cables to complete the control circuit</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3.2. Generator Circuit</h3>
+<p>The generator circuit relies on kinetic motion to generate electricity to power the circuit. Friction
+between the rear wheel and the generator rotates the magnet within the generator. Hence, the fixed coil
+will cut the moving magnetic fields, creating a change in magnetic flux. According to Faraday’s law of
+electromagnetic induction, an induced electromotive force will be generated (Wikipedia, n.d.).</p>
+								<div class="image magna"><img src="docs/pedal-powered/MAGNET.png" alt="" /></div>
+<p>Figure 1: Outline of a fixed coil generator (Excel@Physics, n.d.)</p>
+								<div class="image magna"><img src="docs/pedal-powered/closeup.png" alt="" /></div>
+								<p>Figure 2: Area of contact between the rear wheel and the AC generator</p>
+								<p>The output current is then routed into the control circuit via electrical cables and a socket.</p>
+<h3>3.3. Control Circuit</h3>
+<p>The control circuit comprises the main mechanism that powers the pump. Its main goal is to rectify
+the alternating current into usable direct current, while also powering and controlling other additional
+components such as the Arduino UNO, the load cell, and the relay module. It is paramount to understand
+that the output current of the generator circuit needs to pass through several stages before other electrical
+components can utilize it. First and foremost, the voltage of the current must be increased to 220V by
+the step-up transformer before routing it to a DC power supply. In this case, the power supply acts as a
+rectifier that converts the alternating current to a direct current. This will be routed to two components:
+the Arduino UNO board and the 12V DC pump.</p>
+								<div class="image"><img src="docs/pedal-powered/schematic.png" alt="" /></div>
+<p>Figure 3: Schematic of the control circuit</p>
+<p>As observed in the above schematic, a load cell and an HX-711 amplifier were implemented into the
+system. This is to prevent hazardous liquid overflow and spillage by deactivating the pump once the
+mass of the liquid reaches a predefined threshold. To do so, the mass of the liquid must be read regularly
+by the load cell and checked by the Arduino UNO. Once it reaches the aforementioned threshold, the
+Arduino UNO board will send a signal to the relay module to deactivate the pump to interrupt the flow
+of the liquid. Moreover, a minimum mass value has been set to ensure that the pump will only activate
+when the load cell detects a cup.</p>
+								<div class="image"><img src="docs/pedal-powered/flow.png" alt="" /></div>
+<p>Figure 4: Flowchart of the algorithm</p>
+<h2>4. Results</h2>
+<p>The system successfully transported tap water from one container to another. A 5.5g polystyrene cup
+was used during the trial. However, power from the generator circuit to the control circuit is sometimes
+briefly interrupted, causing sudden stops in the liquid’s motion. Overall, the prototype has met its initial
+objective and is now subject to further improvements.</p>
+<h2>5. Evaluation</h2>
+<p>This system is still a prototype and thus has a spacious area for improvement. One of the major
+flaws of the system is that the liquid flows too fast, such that the user does not expend as many calories
+during the pedaling motion as expected. This could be fixed by adding a PWM-controlled MOSFET to
+the circuit (MOSFET - Wikipedia, n.d.) instead of using a relay to control the DC pump. Moreover,
+a calorie display system could also be implemented to provide the user with information regarding their
+overall calorie expenditure.</p>
+<h2>6. Conclusion</h2>
+<p>In conclusion, the pedal-powered liquid dispenser prototype offers a promising solution for reducing
+sugar-sweetened drink consumption by integrating physical activity with beverage intake. This innovative
+approach not only encourages healthier habits but also paves the way for enhancements that could further
+enrich user experience and foster environmental sustainability. With continued development, the system
+has the potential to significantly influence consumer behavior towards more health-conscious and eco-
+friendly practices.</p>
+<h2>References</h2>
+<ol>
+  <li>
+    Excel@Physics. (n.d.). <i>a.c Generators</i>. Excel@Physics. Retrieved June 11, 2025, from 
+    <a href="http://www.excelatphysics.com/ac-generators.html" target="_blank">
+      http://www.excelatphysics.com/ac-generators.html
+    </a>
+  </li>
+  <li>
+    Lara-Castor, L. (2024, August 07). <i>Intake of sugar-sweetened beverages among children and adolescents in 185 countries between 1990 and 2018: population-based study</i>. BMJ. 
+    <a href="https://doi.org/10.1136/bmj-2024-079234" target="_blank">
+      https://doi.org/10.1136/bmj-2024-079234
+    </a>
+  </li>
+  <li>
+    Lara-Castor, L. (2025, January 06). <i>Burdens of type 2 diabetes and cardiovascular disease attributable to sugar-sweetened beverages in 184 countries</i>. Nature. 
+    <a href="https://www.nature.com/articles/s41591-024-03345-4" target="_blank">
+      https://www.nature.com/articles/s41591-024-03345-4
+    </a>
+  </li>
+  <li>
+    Maier, J., & Appleton, D. (n.d.). <i>Transformer</i>. Wikipedia. Retrieved June 10, 2025, from 
+    <a href="https://en.wikipedia.org/wiki/Transformer" target="_blank">
+      https://en.wikipedia.org/wiki/Transformer
+    </a>
+  </li>
+  <li>
+    <i>MOSFET - Wikipedia</i>. (n.d.). Wikipedia, the free encyclopedia. Retrieved June 11, 2025, from 
+    <a href="https://en.wikipedia.org/wiki/MOSFET" target="_blank">
+      https://en.wikipedia.org/wiki/MOSFET
+    </a>
+  </li>
+  <li>
+    Mulya, A. (2025, February 14). <i>Understanding Sugar Tax in Indonesia: What You Need to Know</i>. InvestInAsia. 
+    <a href="https://investinasia.id/blog/sugar-tax-indonesia/" target="_blank">
+      https://investinasia.id/blog/sugar-tax-indonesia/
+    </a>
+  </li>
+  <li>
+    WikiBooks. (n.d.). <i>Electric Motors And Generators/AC Motors and Generators</i>. WikiBooks. 
+    <a href="https://en.wikibooks.org/wiki/Electric_Motors_And_Generators/AC_Motors_and_Generators" target="_blank">
+      https://en.wikibooks.org/wiki/Electric_Motors_And_Generators/AC_Motors_and_Generators
+    </a>
+  </li>
+  <li>
+    Wikipedia. (n.d.). <i>Faraday’s law of induction</i> - Wikipedia. Wikipedia, the free encyclopedia. Retrieved June 11, 2025, from 
+    <a href="https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction" target="_blank">
+      https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction
+    </a>
+  </li>
+</ol>
+
+</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3"></textarea>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li><li>Distributor: <a href="https://themewagon.com/">ThemeWagon</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

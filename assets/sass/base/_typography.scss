@@ -1,0 +1,217 @@
+/* Type */
+
+html {
+	font-size: 16pt;
+  
+	@include breakpoint(xlarge) {
+	  font-size: 12pt;
+	}
+  
+	@include breakpoint(large) {
+	  font-size: 11pt;
+	}
+  
+	@include breakpoint(xxsmall) {
+	  font-size: 10pt;
+	}
+  }
+  
+  body {
+	color: #ffffff; // Force white font
+  }
+  
+  body, input, select, textarea {
+	font-family: _font(family);
+	font-weight: _font(weight);
+	font-size: 1rem;
+	line-height: 2.375;
+	color: #ffffff; // Input fields use white too
+  }
+  
+  a {
+	@include vendor('transition', (
+	  'color #{_duration(transition)} ease-in-out',
+	  'background-color #{_duration(transition)} ease-in-out',
+	  'border-color #{_duration(transition)} ease-in-out',
+	  'box-shadow #{_duration(transition)} ease-in-out'
+	));
+	border-bottom: dotted 1px;
+	text-decoration: none;
+	color: #ffffff;
+  
+	&:hover {
+	  border-bottom-color: transparent;
+	  color: #ff0033 !important; // red accent on hover
+	}
+  }
+  
+  strong, b {
+	font-weight: _font(weight-bold);
+	color: #ffffff;
+  }
+
+  p {
+	text-align: justify;
+	margin: 0 0 _size(element-margin) 0;
+	color: #ffffff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-family: _font(family-heading);
+	font-weight: _font(weight-heading);
+	line-height: 1.5;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	margin: 0 0 (_size(element-margin) * 0.5) 0;
+	color: #ffffff;
+  
+	a {
+	  border-bottom: 0;
+	  color: inherit;
+	  text-decoration: none;
+	}
+  }
+  
+  h1 {
+	font-size: 4rem;
+	line-height: 1.1;
+	margin: 0 0 _size(element-margin) 0;
+  }
+  
+  h2 {
+	font-size: 1.75rem;
+	line-height: 1.3;
+	margin: 0 0 (_size(element-margin) * 0.75) 0;
+  }
+  
+  h3 {
+	font-size: 1.25rem;
+	margin: 0 0 (_size(element-margin) * 0.75) 0;
+  }
+  
+  h4 {
+	font-size: 1rem;
+  }
+  
+  h5 {
+	font-size: 0.9rem;
+  }
+  
+  h6 {
+	font-size: 0.8rem;
+  }
+  
+  sub {
+	font-size: 0.8rem;
+	position: relative;
+	top: 0.5rem;
+  }
+  
+  sup {
+	font-size: 0.8rem;
+	position: relative;
+	top: -0.5rem;
+  }
+  
+  blockquote {
+	border-left: solid 4px;
+
+	margin: 0 0 _size(element-margin) 0;
+	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	color: #ffffff;
+	border-left-color: #ff0033;
+  }
+  
+  code {
+	border-radius: _size(border-radius);
+	border: solid 2px;
+	font-family: _font(family-fixed);
+	font-size: 0.9rem;
+	margin: 0 0.25rem;
+	padding: 0.25rem 0.65rem;
+	background: rgba(#ff0033, 0.1);
+	border-color: #ff0033;
+	color: #ffffff;
+  }
+  
+  pre {
+	-webkit-overflow-scrolling: touch;
+	font-family: _font(family-fixed);
+	font-size: 0.9rem;
+	margin: 0 0 _size(element-margin) 0;
+  
+	code {
+	  display: block;
+	  line-height: 1.75;
+	  padding: 1rem 1.5rem;
+	  overflow-x: auto;
+	  background: rgba(#ff0033, 0.1);
+	  border-color: #ff0033;
+	  color: #ffffff;
+	}
+  }
+  
+  hr {
+	border: 0;
+	border-bottom: solid 2px #ff0033;
+	margin: (_size(element-margin) * 1.5) 0;
+  
+	&.major {
+	  margin: (_size(element-margin) * 2.5) 0;
+	}
+  }
+  
+  .align-left {
+	text-align: left;
+  }
+  
+  .align-center {
+	text-align: center;
+  }
+  
+  .align-right {
+	text-align: right;
+  }
+  
+  // Override mixin to avoid palette-based colors entirely
+  @mixin color-typography($p: null) {
+	input, select, textarea {
+	  color: #ffffff;
+	}
+  
+	a {
+	  color: #ffffff;
+	  border-bottom-color: rgba(#ffffff, 0.5);
+  
+	  &:hover {
+		border-bottom-color: transparent;
+		color: #ff0033 !important;
+	  }
+	}
+  
+	strong, b {
+	  color: #ffffff;
+	}
+  
+	h1, h2, h3, h4, h5, h6 {
+	  color: #ffffff;
+	}
+  
+	blockquote {
+	  border-left-color: #ff0033;
+	  color: #ffffff;
+	}
+  
+	code {
+	  background: rgba(#ff0033, 0.1);
+	  border-color: #ff0033;
+	  color: #ffffff;
+	}
+  
+	hr {
+	  border-bottom-color: #ff0033;
+	}
+  }
+  
+  @include color-typography;
+  

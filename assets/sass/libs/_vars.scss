@@ -1,0 +1,63 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		menu:				0.5s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		element-height:		3rem,
+		element-margin:		2rem,
+		padding:			2rem,
+		wrapper:			72rem
+	);
+
+// Font.
+	$font: (
+		family:				('Fira Code', 'Courier New', monospace),
+		family-heading:		('Raleway', sans-serif),
+		family-fixed:		('Fira Code', 'Courier New', monospace),
+		weight:				300,
+		weight-bold:		600,
+		weight-heading:		900
+	);
+
+// Palette.
+	$palette: (
+		wrapper-bg:        #0d0d0d,
+
+		bg:                #0d0d0d,               // background
+		fg:                #ffffff,               // main font color
+		fg-bold:           #ffffff,               // bold text
+		fg-light:          rgba(#ffffff, 0.65),   // light text
+		border:            mix(#ff0033, #0d0d0d, 60%),
+		border-bg:         rgba(#ff0033, 0.15),
+		accent:            #ff0033,               // red accents
+		
+		alt: (
+		  bg:              #1a1a1a,
+		  fg:              #ffffff,
+		  fg-bold:         #ffffff,
+		  fg-light:        rgba(#ffffff, 0.5),
+		  border:          mix(#ff0033, #1a1a1a, 50%),
+		  border-bg:       rgba(#ff0033, 0.25),
+		  accent:          #ff0033,
+		),
+		
+		invert: (
+		  bg:              #ffffff,
+		  bg-alt:          #f5f5f5,
+		  fg:              #000000,
+		  fg-bold:         #000000,
+		  fg-light:        rgba(#000000, 0.5),
+		  border:          #000000,
+		  border-bg:       rgba(#000000, 0.075),
+		  accent:          #ff0033,
+		),
+		
+	);
