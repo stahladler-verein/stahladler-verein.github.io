@@ -2870,10 +2870,26 @@ body.is-loading #intro:not(.hidden) + #header + #nav {
   padding: 1rem 1.75rem;
   text-transform: uppercase;
   visibility: visible;
+  width: 250px;
+  height: 80px;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #header .logo:hover {
   border-color: #ff0033 !important;
   color: #ff0033 !important;
+}
+#header .logo img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+#header .logo:hover {
+  border-color: #ff0033 !important;
 }
 @media screen and (max-width: 980px) {
   #header {

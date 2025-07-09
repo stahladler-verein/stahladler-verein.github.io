@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">STAHLADLER</a>
+						<a href="index.html" class="logo"><img src="images/logo-white-nobg.png" alt="" /></a>
 					</header>
 
 				<!-- Nav -->
@@ -165,9 +165,9 @@ relay module is utilized to activate and deactivate the aforementioned pump.
 between the rear wheel and the generator rotates the magnet within the generator. Hence, the fixed coil
 will cut the moving magnetic fields, creating a change in magnetic flux. According to Faraday’s law of
 electromagnetic induction, an induced electromotive force will be generated (Wikipedia, n.d.).</p>
-								<div class="image magna"><img src="docs/pedal-powered/MAGNET.png" alt="" /></div>
+								<div class="image magna"><img src="docs/2025/pedal-powered/MAGNET.png" alt="" /></div>
 <p>Figure 1: Outline of a fixed coil generator (Excel@Physics, n.d.)</p>
-								<div class="image magna"><img src="docs/pedal-powered/closeup.png" alt="" /></div>
+								<div class="image magna"><img src="docs/2025/pedal-powered/closeup.png" alt="" /></div>
 								<p>Figure 2: Area of contact between the rear wheel and the AC generator</p>
 								<p>The output current is then routed into the control circuit via electrical cables and a socket.</p>
 <h3>3.3. Control Circuit</h3>
@@ -179,7 +179,7 @@ components can utilize it. First and foremost, the voltage of the current must b
 the step-up transformer before routing it to a DC power supply. In this case, the power supply acts as a
 rectifier that converts the alternating current to a direct current. This will be routed to two components:
 the Arduino UNO board and the 12V DC pump.</p>
-								<div class="image"><img src="docs/pedal-powered/schematic.png" alt="" /></div>
+								<div class="image"><img src="docs/2025/pedal-powered/schematic.png" alt="" /></div>
 <p>Figure 3: Schematic of the control circuit</p>
 <p>As observed in the above schematic, a load cell and an HX-711 amplifier were implemented into the
 system. This is to prevent hazardous liquid overflow and spillage by deactivating the pump once the
@@ -188,7 +188,7 @@ by the load cell and checked by the Arduino UNO. Once it reaches the aforementio
 Arduino UNO board will send a signal to the relay module to deactivate the pump to interrupt the flow
 of the liquid. Moreover, a minimum mass value has been set to ensure that the pump will only activate
 when the load cell detects a cup.</p>
-								<div class="image"><img src="docs/pedal-powered/flow.png" alt="" /></div>
+								<div class="image"><img src="docs/2025/pedal-powered/flow.png" alt="" /></div>
 <p>Figure 4: Flowchart of the algorithm</p>
 <h2>4. Results</h2>
 <p>The system successfully transported tap water from one container to another. A 5.5g polystyrene cup
