@@ -1,7 +1,7 @@
 [
   {
     "title": "An Exploration of Pedal Powered Liquid Dispensers",
-    "url": "pedalpowered-25.html",
+    "url": "2025-pedal-powered-a.html",
     "content": "The increasing consumption of sugar-sweetened beverages among youth has been linked to rising obesity and type 2 diabetes rates, prompting health policy responses such as indirect taxation on sug- ary drinks. This project proposes an innovative, health-conscious alternative: a pedal-powered liquid dispenser. The device encourages physical activity by requiring users to pedal to access sugary drinks by converting kinetic energy from a pedaling motion to electrical energy to power a liquid pump. The system utilizes a bike-mounted AC generator, a voltage step-up transformer, a DC power supply, and an Arduino-controlled circuit integrated with a load cell and a relay module to manage the flow of the liquid. The project promotes environmental sustainability, physical recreation, and behavioral change in consumption habits, despite the challenges faced by the current prototype, such as overly rapid liquid dispensing. Enhancements such as PWM-controlled MOSFETs and calorie tracking position it as a creative intervention in the public health landscape."
   }
 
