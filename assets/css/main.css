@@ -3838,4 +3838,8 @@ body.is-loading #intro:not(.hidden) + #header + #nav {
   border: 1px solid #ff0033;
 }
 
+.body {
+  background-color: #000;
+}
+
 /*# sourceMappingURL=main.css.map */
