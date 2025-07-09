@@ -1372,6 +1372,7 @@ html {
 
 body {
   color: #ffffff;
+  background-color: #000;
 }
 
 body, input, select, textarea {
